@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling & Layouts | WebCraft Academy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <a href="../index.html" style="color:inherit;">WebCraft Academy</a>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../courses.html" style="color:#2563EB;">Courses</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">AI Learning</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-outline">Login</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- =========================
+         COURSE HERO
+    ========================== -->
+    <section class="course-hero">
+        <div class="container">
+            <div>
+                <span class="course-badge">🎨 Beginner</span>
+                <h1>CSS Styling & Layouts</h1>
+                <p class="lead">
+                    CSS (Cascading Style Sheets) controls how your HTML looks.
+                    Learn colors, the box model, flexbox, grid, and animations
+                    to design modern, beautiful pages.
+                </p>
+                <div class="course-meta">
+                    <span>📚 7 Lessons</span>
+                    <span>⏱ 5 Hours</span>
+                    <span>🧩 HTML basics recommended</span>
+                </div>
+                <a href="#lesson1" class="btn btn-primary">Start Learning</a>
+            </div>
+
+            <div class="course-cover">
+                <div class="big-icon">🎨</div>
+                <h3>{ }</h3>
+                <p>Beautiful Layouts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         COURSE BODY
+    ========================== -->
+    <div class="container course-layout">
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+            <h4>Lesson Outline</h4>
+            <ul>
+                <li><a href="#lesson1">1. CSS Basics & Selectors</a></li>
+                <li><a href="#lesson2">2. Colors, Fonts & Text</a></li>
+                <li><a href="#lesson3">3. The Box Model</a></li>
+                <li><a href="#lesson4">4. Flexbox</a></li>
+                <li><a href="#lesson5">5. CSS Grid</a></li>
+                <li><a href="#lesson6">6. Transitions & Animations</a></li>
+                <li><a href="#lesson7">7. Custom Properties</a></li>
+            </ul>
+        </aside>
+
+        <!-- Content -->
+        <main class="course-content">
+
+            <div class="lesson" id="lesson1">
+                <h2><span class="lesson-num">1</span> CSS Basics & Selectors</h2>
+                <p>
+                    CSS styles HTML using selectors. The most common are element selectors
+                    (<code>p</code>), class selectors (<code>.btn</code>), and ID selectors
+                    (<code>#header</code>). Link a stylesheet with the
+                    <code>&lt;link&gt;</code> tag.
+                </p>
+                <pre>
+            <span class="t">p</span>{
+                <span class="n">color</span>: <span class="s">#2563EB</span>;
+                <span class="n">font-size</span>: <span class="s">16px</span>;
+            }
+
+            <span class="t">.btn</span>{
+                <span class="n">background</span>: <span class="s">#2563EB</span>;
+            }</pre>
+            </div>
+
+            <div class="lesson" id="lesson2">
+                <h2><span class="lesson-num">2</span> Colors, Fonts & Text</h2>
+                <p>
+                    Use hex colors (<code>#2563EB</code>), rgb, or named colors.
+                    Set fonts with <code>font-family</code>, size with
+                    <code>font-size</code>, and control spacing with
+                    <code>line-height</code> and <code>letter-spacing</code>.
+                </p>
+                <pre>
+            body{
+                <span class="n">font-family</span>: <span class="s">'Poppins', sans-serif</span>;
+                <span class="n">background</span>: <span class="s">#F8FAFC</span>;
+                <span class="n">color</span>: <span class="s">#0F172A</span>;
+                <span class="n">line-height</span>: <span class="s">1.6</span>;
+            }</pre>
+                <div class="tip">
+                    <strong>💡 Tip</strong>
+                    Use a tool like a color picker to build a consistent palette of 2-3
+                    main colors plus neutrals for text and backgrounds.
+                </div>
+            </div>
+
+            <div class="lesson" id="lesson3">
+                <h2><span class="lesson-num">3</span> The Box Model</h2>
+                <p>
+                    Every element is a box made of <code>content</code>, <code>padding</code>,
+                    <code>border</code>, and <code>margin</code>. Adding
+                    <code>box-sizing: border-box</code> keeps widths predictable.
+                </p>
+                <pre>
+            <span class="t">.card</span>{
+                <span class="n">width</span>: <span class="s">300px</span>;
+                <span class="n">padding</span>: <span class="s">20px</span>;
+                <span class="n">border</span>: <span class="s">1px solid #e2e8f0</span>;
+                <span class="n">margin</span>: <span class="s">10px</span>;
+                <span class="n">border-radius</span>: <span class="s">12px</span>;
+            }</pre>
+            </div>
+
+            <div class="lesson" id="lesson4">
+                <h2><span class="lesson-num">4</span> Flexbox</h2>
+                <p>
+                    Flexbox arranges items in a row or column. Set
+                    <code>display:flex</code> on a container and use
+                    <code>justify-content</code>, <code>align-items</code>, and
+                    <code>gap</code> to position children.
+                </p>
+                <pre>
+            <span class="t">.nav</span>{
+                <span class="n">display</span>: <span class="s">flex</span>;
+                <span class="n">justify-content</span>: <span class="s">space-between</span>;
+                <span class="n">align-items</span>: <span class="s">center</span>;
+                <span class="n">gap</span>: <span class="s">20px</span>;
+            }</pre>
+            </div>
+
+            <div class="lesson" id="lesson5">
+                <h2><span class="lesson-num">5</span> CSS Grid</h2>
+                <p>
+                    Grid creates two-dimensional layouts. Use
+                    <code>grid-template-columns</code> to define columns and
+                    <code>gap</code> for spacing between cells.
+                </p>
+                <pre>
+            <span class="t">.course-grid</span>{
+                <span class="n">display</span>: <span class="s">grid</span>;
+                <span class="n">grid-template-columns</span>: <span class="s">repeat(3, 1fr)</span>;
+                <span class="n">gap</span>: <span class="s">24px</span>;
+            }</pre>
+                <div class="tip">
+                    <strong>Flexbox or Grid?</strong>
+                    Use flexbox for one-dimensional rows/columns (like a navbar) and grid
+                    for full page or card layouts. Both are essential.
+                </div>
+            </div>
+
+            <div class="lesson" id="lesson6">
+                <h2><span class="lesson-num">6</span> Transitions & Animations</h2>
+                <p>
+                    Transitions animate changes between states, while keyframe
+                    animations run continuously. Add hover effects with
+                    <code>transition</code>.
+                </p>
+                <pre>
+            <span class="t">.btn</span>{
+                <span class="n">transition</span>: <span class="s">transform .3s ease</span>;
+            }
+
+            <span class="t">.btn:hover</span>{
+                <span class="n">transform</span>: <span class="s">translateY(-4px)</span>;
+            }
+
+            <span class="t">@keyframes</span> <span class="k">float</span>{
+                <span class="k">50%</span>{ <span class="n">transform</span>: <span class="s">translateY(-15px)</span>; }
+            }</pre>
+            </div>
+
+            <div class="lesson" id="lesson7">
+                <h2><span class="lesson-num">7</span> Custom Properties</h2>
+                <p>
+                    Custom properties (CSS variables) store reusable values.
+                    Define them on <code>:root</code> and reuse them anywhere with
+                    <code>var()</code>. Changing one value updates the whole site.
+                </p>
+                <pre>
+            <span class="t">:root</span>{
+                <span class="t">--primary</span>: <span class="s">#2563EB</span>;
+                <span class="t">--dark</span>: <span class="s">#0F172A</span>;
+                <span class="t">--radius</span>: <span class="s">12px</span>;
+            }
+
+            <span class="t">.btn</span>{
+                <span class="n">background</span>: <span class="s">var(--primary)</span>;
+                <span class="n">border-radius</span>: <span class="s">var(--radius)</span>;
+            }</pre>
+            </div>
+
+            <div class="lesson-nav">
+                <a href="html.html"><small>← Previous</small> HTML Fundamentals</a>
+                <a href="javascript.html"><small>Next Course</small> JavaScript Essentials →</a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- =========================
+         CTA
+    ========================== -->
+    <section class="cta">
+        <div class="container cta-content">
+            <h2>Now Your Pages Look Amazing</h2>
+            <p>Add interactivity next with JavaScript.</p>
+            <a href="javascript.html" class="btn cta-btn">Learn JavaScript</a>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>WebCraft Academy</h3>
+                <p>Learn. Build. Innovate.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html" style="color:#cbd5e1;">Home</a></li>
+                    <li><a href="../courses.html" style="color:#cbd5e1;">Courses</a></li>
+                    <li>Tutorials</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li>Blog</li>
+                    <li>FAQ</li>
+                    <li>Community</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="socials">
+                    <span>FB</span>
+                    <span>IN</span>
+                    <span>GH</span>
+                    <span>TW</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 WebCraft Academy. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

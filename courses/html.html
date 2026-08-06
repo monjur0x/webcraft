@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Fundamentals | WebCraft Academy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <a href="../index.html" style="color:inherit;">WebCraft Academy</a>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../courses.html" style="color:#2563EB;">Courses</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">AI Learning</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-outline">Login</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- =========================
+         COURSE HERO
+    ========================== -->
+    <section class="course-hero">
+        <div class="container">
+            <div>
+                <span class="course-badge">🌐 Beginner</span>
+                <h1>HTML Fundamentals</h1>
+                <p class="lead">
+                    HTML (HyperText Markup Language) is the structure of every website.
+                    In this course you'll learn to build clean, semantic pages from scratch.
+                </p>
+                <div class="course-meta">
+                    <span>📚 7 Lessons</span>
+                    <span>⏱ 4 Hours</span>
+                    <span>🧩 No experience needed</span>
+                </div>
+                <a href="#lesson1" class="btn btn-primary">Start Learning</a>
+            </div>
+
+            <div class="course-cover">
+                <div class="big-icon">🌐</div>
+                <h3>&lt;html&gt;</h3>
+                <p>Structure Your Website</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         COURSE BODY
+    ========================== -->
+    <div class="container course-layout">
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+            <h4>Lesson Outline</h4>
+            <ul>
+                <li><a href="#lesson1">1. What is HTML?</a></li>
+                <li><a href="#lesson2">2. Page Structure</a></li>
+                <li><a href="#lesson3">3. Text & Headings</a></li>
+                <li><a href="#lesson4">4. Links & Images</a></li>
+                <li><a href="#lesson5">5. Lists & Tables</a></li>
+                <li><a href="#lesson6">6. Forms</a></li>
+                <li><a href="#lesson7">7. Semantic HTML</a></li>
+            </ul>
+        </aside>
+
+        <!-- Content -->
+        <main class="course-content">
+
+            <div class="lesson" id="lesson1">
+                <h2><span class="lesson-num">1</span> What is HTML?</h2>
+                <p>
+                    HTML is a <strong>markup language</strong> used to structure content on the web.
+                    It uses <em>tags</em> wrapped in angle brackets like <code>&lt;p&gt;</code> to tell the
+                    browser what each piece of content is. HTML is not a programming language —
+                    it doesn't run logic. It just describes structure.
+                </p>
+                <pre><span class="t">&lt;p&gt;</span>Hello, world!<span class="t">&lt;/p&gt;</span></pre>
+                <div class="tip">
+                    <strong>💡 Tip</strong>
+                    "HTML" stands for HyperText Markup Language. "HyperText" means clickable
+                    text (links), and "Markup" means using tags to label content.
+                </div>
+            </div>
+
+            <div class="lesson" id="lesson2">
+                <h2><span class="lesson-num">2</span> Page Structure</h2>
+                <p>
+                    Every HTML page begins with a <code>&lt;!DOCTYPE html&gt;</code> declaration
+                    followed by the <code>&lt;html&gt;</code> root element. Inside it live two children:
+                    <code>&lt;head&gt;</code> for metadata (title, styles) and <code>&lt;body&gt;</code>
+                    for everything the user sees.
+                </p>
+                <pre>
+<span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html</span> lang="en"<span class="t">&gt;</span>
+    <span class="t">&lt;head&gt;</span>
+        <span class="t">&lt;title&gt;</span>My Page<span class="t">&lt;/title&gt;</span>
+    <span class="t">&lt;/head&gt;</span>
+    <span class="t">&lt;body&gt;</span>
+        <span class="t">&lt;p&gt;</span>Visible content here<span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span></pre>
+            </div>
+
+            <div class="lesson" id="lesson3">
+                <h2><span class="lesson-num">3</span> Text & Headings</h2>
+                <p>
+                    Headings range from <code>&lt;h1&gt;</code> (most important) down to
+                    <code>&lt;h6&gt;</code>. Use only one <code>&lt;h1&gt;</code> per page for good
+                    accessibility and SEO. Use <code>&lt;p&gt;</code> for paragraphs and
+                    <code>&lt;strong&gt;</code> or <code>&lt;em&gt;</code> for emphasis.
+                </p>
+                <pre>
+<span class="t">&lt;h1&gt;</span>Welcome to WebCraft<span class="t">&lt;/h1&gt;</span>
+<span class="t">&lt;h2&gt;</span>Getting Started<span class="t">&lt;/h2&gt;</span>
+<span class="t">&lt;p&gt;</span>This is a <span class="t">&lt;strong&gt;</span>bold<span class="t">&lt;/strong&gt;</span>
+   and <span class="t">&lt;em&gt;</span>italic<span class="t">&lt;/em&gt;</span> sentence.<span class="t">&lt;/p&gt;</span></pre>
+            </div>
+
+            <div class="lesson" id="lesson4">
+                <h2><span class="lesson-num">4</span> Links & Images</h2>
+                <p>
+                    Links use the <code>&lt;a&gt;</code> tag with an <code>href</code> attribute.
+                    Images use the self-closing <code>&lt;img&gt;</code> tag with <code>src</code>
+                    and <code>alt</code>.
+                </p>
+                <h3 class="ex">Example</h3>
+                <pre>
+<span class="t">&lt;a</span> href="https://webcraft.example"<span class="t">&gt;</span>Visit WebCraft<span class="t">&lt;/a&gt;</span>
+
+<span class="t">&lt;img</span> src="logo.png" alt="WebCraft logo" width="120"<span class="t">&gt;</span></pre>
+                <div class="tip">
+                    <strong>Remember</strong>
+                    Always add a descriptive <code>alt</code> to images — it helps screen readers
+                    and shows text if the image fails to load.
+                </div>
+            </div>
+
+            <div class="lesson" id="lesson5">
+                <h2><span class="lesson-num">5</span> Lists & Tables</h2>
+                <p>
+                    Use <code>&lt;ul&gt;</code> for unordered (bullet) lists and
+                    <code>&lt;ol&gt;</code> for ordered (numbered) lists. Each item goes in an
+                    <code>&lt;li&gt;</code>. Tables use <code>&lt;table&gt;</code>,
+                    <code>&lt;tr&gt;</code> (row), <code>&lt;th&gt;</code> (header cell), and
+                    <code>&lt;td&gt;</code> (data cell).
+                </p>
+                <pre>
+            <span class="t">&lt;ul&gt;</span>
+                <span class="t">&lt;li&gt;</span>HTML<span class="t">&lt;/li&gt;</span>
+                <span class="t">&lt;li&gt;</span>CSS<span class="t">&lt;/li&gt;</span>
+            <span class="t">&lt;/ul&gt;</span>
+
+            <span class="t">&lt;table&gt;</span>
+                <span class="t">&lt;tr&gt;</span><span class="t">&lt;th&gt;</span>Topic<span class="t">&lt;/th&gt;</span><span class="t">&lt;th&gt;</span>Level<span class="t">&lt;/th&gt;</span><span class="t">&lt;/tr&gt;</span>
+                <span class="t">&lt;tr&gt;</span><span class="t">&lt;td&gt;</span>HTML<span class="t">&lt;/td&gt;</span><span class="t">&lt;td&gt;</span>Easy<span class="t">&lt;/td&gt;</span><span class="t">&lt;/tr&gt;</span>
+            <span class="t">&lt;/table&gt;</span></pre>
+            </div>
+
+            <div class="lesson" id="lesson6">
+                <h2><span class="lesson-num">6</span> Forms</h2>
+                <p>
+                    Forms collect input from users. The <code>&lt;form&gt;</code> wraps fields.
+                    Common inputs are text fields, email, passwords, checkboxes, and submit
+                    buttons. Always give a <code>label</code> to each field.
+                </p>
+                <pre>
+            <span class="t">&lt;form&gt;</span>
+                <span class="t">&lt;label&gt;</span>Name:<span class="t">&lt;/label&gt;</span>
+                <span class="t">&lt;input</span> type="text" name="name"<span class="t">&gt;</span>
+
+                <span class="t">&lt;label&gt;</span>Password:<span class="t">&lt;/label&gt;</span>
+                <span class="t">&lt;input</span> type="password" name="pass"<span class="t">&gt;</span>
+
+                <span class="t">&lt;button</span> type="submit"<span class="t">&gt;</span>Submit<span class="t">&lt;/button&gt;</span>
+            <span class="t">&lt;/form&gt;</span></pre>
+            </div>
+
+            <div class="lesson" id="lesson7">
+                <h2><span class="lesson-num">7</span> Semantic HTML</h2>
+                <p>
+                    Semantic tags describe their meaning. Using
+                    <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+                    <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>,
+                    and <code>&lt;footer&gt;</code> makes your code readable and helps search engines
+                    and screen readers understand the page's structure.
+                </p>
+                <pre>
+    <span class="t">&lt;header&gt;</span>Site title<span class="t">&lt;/header&gt;</span>
+    <span class="t">&lt;nav&gt;</span>Navigation links<span class="t">&lt;/nav&gt;</span>
+    <span class="t">&lt;main&gt;</span>
+        <span class="t">&lt;article&gt;</span>A standalone piece of content<span class="t">&lt;/article&gt;</span>
+    <span class="t">&lt;/main&gt;</span>
+    <span class="t">&lt;footer&gt;</span>Copyright info<span class="t">&lt;/footer&gt;</span></pre>
+            </div>
+
+            <div class="lesson-nav">
+                <a href="../courses.html"><small>←</small> Back to Courses</a>
+                <a href="css.html"><small>Next Course</small> CSS Styling & Layouts →</a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- =========================
+         CTA
+    ========================== -->
+    <section class="cta">
+        <div class="container cta-content">
+            <h2>Great Job!</h2>
+            <p>You've finished HTML. Now make it beautiful with CSS.</p>
+            <a href="css.html" class="btn cta-btn">Learn CSS Next</a>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>WebCraft Academy</h3>
+                <p>Learn. Build. Innovate.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html" style="color:#cbd5e1;">Home</a></li>
+                    <li><a href="../courses.html" style="color:#cbd5e1;">Courses</a></li>
+                    <li>Tutorials</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li>Blog</li>
+                    <li>FAQ</li>
+                    <li>Community</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="socials">
+                    <span>FB</span>
+                    <span>IN</span>
+                    <span>GH</span>
+                    <span>TW</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 WebCraft Academy. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

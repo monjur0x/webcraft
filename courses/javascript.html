@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Essentials | WebCraft Academy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <a href="../index.html" style="color:inherit;">WebCraft Academy</a>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../courses.html" style="color:#2563EB;">Courses</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">AI Learning</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-outline">Login</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- =========================
+         COURSE HERO
+    ========================== -->
+    <section class="course-hero">
+        <div class="container">
+            <div>
+                <span class="course-badge">⚡ Beginner</span>
+                <h1>JavaScript Essentials</h1>
+                <p class="lead">
+                    JavaScript makes your page come alive. Learn variables, data
+                    types, functions, loops, and the DOM so you can build interactive
+                    features like buttons, menus, and dynamic content.
+                </p>
+                <div class="course-meta">
+                    <span>📚 8 Lessons</span>
+                    <span>⏱ 6 Hours</span>
+                    <span>🧩 HTML & CSS recommended</span>
+                </div>
+                <a href="#lesson1" class="btn btn-primary">Start Learning</a>
+            </div>
+
+            <div class="course-cover">
+                <div class="big-icon">⚡</div>
+                <h3>function () { }</h3>
+                <p>Make It Interactive</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         COURSE BODY
+    ========================== -->
+    <div class="container course-layout">
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+            <h4>Lesson Outline</h4>
+            <ul>
+                <li><a href="#lesson1">1. Intro & First Script</a></li>
+                <li><a href="#lesson2">2. Variables & Data Types</a></li>
+                <li><a href="#lesson3">3. Operators & Strings</a></li>
+                <li><a href="#lesson4">4. Functions</a></li>
+                <li><a href="#lesson5">5. Conditions & Loops</a></li>
+                <li><a href="#lesson6">6. Arrays & Objects</a></li>
+                <li><a href="#lesson7">7. The DOM</a></li>
+                <li><a href="#lesson8">8. Events</a></li>
+            </ul>
+        </aside>
+
+        <!-- Content -->
+        <main class="course-content">
+
+            <div class="lesson" id="lesson1">
+                <h2><span class="lesson-num">1</span> Intro &amp; Your First Script</h2>
+                <p>
+                    JavaScript runs in the browser and lets you change a page after it loads.
+                    Add it with a <code>&lt;script&gt;</code> tag or an external file.
+                    Any error message you print shows up in the Console tab of your
+                    browser's DevTools.
+                </p>
+                <pre>
+<span class="k">console.log</span>(<span class="s">"Hello, World!"</span>);</pre>
+                <p>To open DevTools, press <code>F12</code> or <code>Ctrl+Shift+I</code>.</p>
+            </div>
+
+            <div class="lesson" id="lesson2">
+                <h2><span class="lesson-num">2</span> Variables &amp; Data Types</h2>
+                <p>
+                    Variables store values. Use <code>let</code> for values that change and
+                    <code>const</code> for values that stay the same. Common data types are
+                    strings (text), numbers, booleans (<code>true</code>/<code>false</code>),
+                    and <code>null</code>.
+                </p>
+                <pre>
+            <span class="k">const</span> name = <span class="s">"Monju"</span>;
+            <span class="k">let</span> age = <span class="n">25</span>;
+            <span class="k">const</span> isStudent = <span class="k">true</span>;
+
+            <span class="t">console.log</span>(name, age, isStudent);</pre>
+            </div>
+
+            <div class="lesson" id="lesson3">
+                <h2><span class="lesson-num">3</span> Operators &amp; Strings</h2>
+                <p>
+                    Operators perform math (<code>+ - * / %</code>) and comparisons
+                    (<code>===</code>, <code>!==</code>, <code>&gt;</code>, <code>&lt;</code>).
+                    Combine strings with the <code>+</code> operator or template literals
+                    using backticks and <code>${}</code>.
+                </p>
+                <pre>
+            <span class="k">const</span> price = <span class="n">10</span>;
+            <span class="k">const</span> total = price * <span class="n">2</span>; <span class="c">// 20</span>
+
+            <span class="k">const</span> message = <span class="t">`Total</span> <span class="t">cost:</span> <span class="k">${</span>total<span class="k">}</span> USD<span class="t">`</span>;</pre>
+            </div>
+
+            <div class="lesson" id="lesson4">
+                <h2><span class="lesson-num">4</span> Functions</h2>
+                <p>
+                    Functions are reusable blocks of code. Define them with the
+                    <code>function</code> keyword, give them inputs (parameters), and
+                    return a result.
+                </p>
+                <pre>
+            <span class="k">function</span> <span class="t">greet</span>(name){
+                <span class="k">return</span> <span class="t">`Hello,</span> <span class="t">${name}</span><span class="t">!`</span>;
+            }
+
+            <span class="t">console.log</span>(<span class="t">greet</span>(<span class="s">"Sam"</span>));</pre>
+            </div>
+
+            <div class="lesson" id="lesson5">
+                <h2><span class="lesson-num">5</span> Conditions &amp; Loops</h2>
+                <p>
+                    Use <code>if/else</code> to make decisions and <code>for</code>,
+                    <code>while</code>, or <code>forEach</code> to repeat code.
+                </p>
+                <pre>
+            <span class="k">const</span> score = <span class="n">85</span>;
+
+            <span class="k">if</span> (score &gt;= <span class="n">80</span>){
+                <span class="t">console.log</span>(<span class="s">"Excellent!"</span>);
+            } <span class="k">else</span> {
+                <span class="t">console.log</span>(<span class="s">"Keep practicing."</span>);
+            }
+
+            <span class="k">for</span> (<span class="k">let</span> i = <span class="n">0</span>; i &lt; <span class="n">3</span>; i++){
+                <span class="t">console.log</span>(i); <span class="c">// 0, 1, 2</span>
+            }</pre>
+            </div>
+
+            <div class="lesson" id="lesson6">
+                <h2><span class="lesson-num">6</span> Arrays &amp; Objects</h2>
+                <p>
+                    Arrays store ordered lists, accessed by index (starting at 0).
+                    Objects store named key/value pairs. Both are everywhere in real
+                    JavaScript.
+                </p>
+                <pre>
+            <span class="k">const</span> languages = [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JS"</span>];
+            <span class="t">console.log</span>(languages[<span class="n">0</span>]); <span class="c">// HTML</span>
+
+            <span class="k">const</span> student = { name: <span class="s">"Ada"</span>, age: <span class="n">20</span> };
+            <span class="t">console.log</span>(student.name); <span class="c">// Ada</span></pre>
+            </div>
+
+            <div class="lesson" id="lesson7">
+                <h2><span class="lesson-num">7</span> The DOM</h2>
+                <p>
+                    The DOM (Document Object Model) represents your HTML as objects.
+                    Use <code>document.querySelector</code> to select elements and change
+                    their text, styles, or content.
+                </p>
+                <pre>
+            <span class="k">const</span> title = <span class="t">document.querySelector</span>(<span class="s">"h1"</span>);
+            title.<span class="k">textContent</span> = <span class="s">"Welcome!"</span>;
+            title.<span class="k">style</span>.color = <span class="s">"blue"</span>;</pre>
+            </div>
+
+            <div class="lesson" id="lesson8">
+                <h2><span class="lesson-num">8</span> Events</h2>
+                <p>
+                    Events let your page react to user actions like clicks and typing.
+                    Attach a listener with <code>addEventListener</code> and run code when
+                    it fires.
+                </p>
+                <pre>
+            <span class="k">const</span> btn = <span class="t">document.querySelector</span>(<span class="s">"#button"</span>);
+
+            btn.<span class="t">addEventListener</span>(<span class="s">"click"</span>, () =&gt; {
+                <span class="t">alert</span>(<span class="s">"You clicked me!"</span>);
+            });</pre>
+                <div class="tip">
+                    <strong>💡 Tip</strong>
+                    Arrow functions like <code>() =&gt; { }</code> are a shorter way to write
+                    simple functions and are very common in modern JavaScript.
+                </div>
+            </div>
+
+            <div class="lesson-nav">
+                <a href="css.html"><small>← Previous</small> CSS Styling &amp; Layouts</a>
+                <a href="responsive.html"><small>Next Course</small> Responsive Web Design →</a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- =========================
+         CTA
+    ========================== -->
+    <section class="cta">
+        <div class="container cta-content">
+            <h2>You Speak JavaScript Now</h2>
+            <p>Learn to make your site work beautifully on every screen size.</p>
+            <a href="responsive.html" class="btn cta-btn">Learn Responsive Design</a>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>WebCraft Academy</h3>
+                <p>Learn. Build. Innovate.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html" style="color:#cbd5e1;">Home</a></li>
+                    <li><a href="../courses.html" style="color:#cbd5e1;">Courses</a></li>
+                    <li>Tutorials</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li>Blog</li>
+                    <li>FAQ</li>
+                    <li>Community</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="socials">
+                    <span>FB</span>
+                    <span>IN</span>
+                    <span>GH</span>
+                    <span>TW</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 WebCraft Academy. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>

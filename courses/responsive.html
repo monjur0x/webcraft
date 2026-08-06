@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design | WebCraft Academy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <div class="logo">
+                <a href="../index.html" style="color:inherit;">WebCraft Academy</a>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../courses.html" style="color:#2563EB;">Courses</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">AI Learning</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-outline">Login</a>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- =========================
+         COURSE HERO
+    ========================== -->
+    <section class="course-hero">
+        <div class="container">
+            <div>
+                <span class="course-badge">📱 Intermediate</span>
+                <h1>Responsive Web Design</h1>
+                <p class="lead">
+                    A great website works on every screen. Learn mobile-first thinking,
+                    fluid units, and media queries so your layouts adapt from phones
+                    to wide desktop monitors.
+                </p>
+                <div class="course-meta">
+                    <span>📚 6 Lessons</span>
+                    <span>⏱ 4 Hours</span>
+                    <span>🧩 HTML &amp; CSS required</span>
+                </div>
+                <a href="#lesson1" class="btn btn-primary">Start Learning</a>
+            </div>
+
+            <div class="course-cover">
+                <div class="big-icon">📱</div>
+                <h3>📱 💻 🖥️</h3>
+                <p>One Site, Every Device</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         COURSE BODY
+    ========================== -->
+    <div class="container course-layout">
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+            <h4>Lesson Outline</h4>
+            <ul>
+                <li><a href="#lesson1">1. Mobile-First Principles</a></li>
+                <li><a href="#lesson2">2. Viewport &amp; Meta Tag</a></li>
+                <li><a href="#lesson3">3. Fluid Layouts &amp; Units</a></li>
+                <li><a href="#lesson4">4. Media Queries</a></li>
+                <li><a href="#lesson5">5. Flexible Media</a></li>
+                <li><a href="#lesson6">6. Common Breakpoints</a></li>
+            </ul>
+        </aside>
+
+        <!-- Content -->
+        <main class="course-content">
+
+            <div class="lesson" id="lesson1">
+                <h2><span class="lesson-num">1</span> Mobile-First Principles</h2>
+                <p>
+                    Mobile-first means designing for the smallest screen first, then
+                    adding layout as the screen grows. It keeps your CSS simpler and
+                    often performs better on phones.
+                </p>
+                <div class="tip">
+                    <strong>Why start small?</strong>
+                    Starting with a single-column layout that stacks content is very
+                    simple, then you only add horizontal layout for larger screens.
+                </div>
+            </div>
+
+            <div class="lesson" id="lesson2">
+                <h2><span class="lesson-num">2</span> Viewport &amp; Meta Tag</h2>
+                <p>
+                    The viewport meta tag tells mobile browsers to size the page to the
+                    device width. Almost every responsive page includes it.
+                </p>
+                <pre>
+<span class="t">&lt;meta</span> name="viewport"
+      content="width=device-width, initial-scale=1.0"<span class="t">&gt;</span></pre>
+            </div>
+
+            <div class="lesson" id="lesson3">
+                <h2><span class="lesson-num">3</span> Fluid Layouts &amp; Units</h2>
+                <p>
+                    Use percentage widths and relative units like <code>em</code>,
+                    <code>rem</code>, and <code>vw</code>/<code>vh</code> instead of
+                    fixed pixel widths so elements scale with the screen.
+                </p>
+                <pre>
+            <span class="t">.container</span>{
+                <span class="n">width</span>: <span class="s">90%</span>;
+                <span class="n">max-width</span>: <span class="s">1200px</span>;
+                <span class="n">margin</span>: <span class="s">auto</span>;
+            }</pre>
+                <div class="tip">
+                    <strong>💡 Tip</strong>
+                    Use <code>rem</code> for font sizes so text scales with user settings,
+                    and avoid oversized fixed layouts.
+                </div>
+            </div>
+
+            <div class="lesson" id="lesson4">
+                <h2><span class="lesson-num">4</span> Media Queries</h2>
+                <p>
+                    Media queries apply styles only when a condition is true, like a
+                    minimum screen width. This lets you change columns, hide menus, or
+                    resize text at specific sizes.
+                </p>
+                <pre>
+            <span class="t">.grid</span>{
+                <span class="n">display</span>: <span class="s">grid</span>;
+                <span class="n">grid-template-columns</span>: <span class="s">1fr</span>;
+            }
+
+            <span class="t">@media</span> (min-width: <span class="n">768px</span>){
+                <span class="t">.grid</span>{
+                    <span class="n">grid-template-columns</span>: <span class="s">repeat(3, 1fr)</span>;
+                }
+            }</pre>
+            </div>
+
+            <div class="lesson" id="lesson5">
+                <h2><span class="lesson-num">5</span> Flexible Media</h2>
+                <p>
+                    Images, videos, and other media should never overflow their
+                    container. Set them to <code>max-width: 100%</code> and use
+                    <code>height: auto</code> so they keep their aspect ratio.
+                </p>
+                <pre>
+            <span class="t">img,</span> <span class="t">video</span>{
+                <span class="n">max-width</span>: <span class="s">100%</span>;
+                <span class="n">height</span>: <span class="s">auto</span>;
+            }</pre>
+            </div>
+
+            <div class="lesson" id="lesson6">
+                <h2><span class="lesson-num">6</span> Common Breakpoints</h2>
+                <p>
+                    Breakpoints are the widths where your layout changes. These are
+                    common values to start from — adjust them for your actual content.
+                </p>
+                <pre>
+            <span class="t">/* Small phones */</span>       0 - 480px
+            <span class="t">/* Tablets */</span>      @media (min-width: 768px)
+            <span class="t">/* Desktop */</span>      @media (min-width: 992px)
+            <span class="t">/* Wide screens */</span> @media (min-width: 1200px)</pre>
+            </div>
+
+            <div class="lesson-nav">
+                <a href="javascript.html"><small>← Previous</small> JavaScript Essentials</a>
+                <a href="ai.html"><small>Next Course</small> AI for Developers →</a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- =========================
+         CTA
+    ========================== -->
+    <section class="cta">
+        <div class="container cta-content">
+            <h2>Your Sites Now Work Everywhere</h2>
+            <p>Explore how AI tools can speed up your development workflow.</p>
+            <a href="ai.html" class="btn cta-btn">Explore AI for Developers</a>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>WebCraft Academy</h3>
+                <p>Learn. Build. Innovate.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html" style="color:#cbd5e1;">Home</a></li>
+                    <li><a href="../courses.html" style="color:#cbd5e1;">Courses</a></li>
+                    <li>Tutorials</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li>Blog</li>
+                    <li>FAQ</li>
+                    <li>Community</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="socials">
+                    <span>FB</span>
+                    <span>IN</span>
+                    <span>GH</span>
+                    <span>TW</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 WebCraft Academy. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
