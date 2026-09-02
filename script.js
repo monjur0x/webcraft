@@ -2,41 +2,6 @@
     'use strict';
 
     /* =========================
-       DARK MODE
-    ========================== */
-    const html = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        html.setAttribute('data-theme', 'dark');
-    }
-
-    function toggleDarkMode() {
-        const isDark = html.getAttribute('data-theme') === 'dark';
-        html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-        localStorage.setItem('theme', isDark ? 'light' : 'dark');
-        updateDarkIcon();
-    }
-
-    function initDarkMode() {
-        const btn = document.createElement('button');
-        btn.className = 'btn btn-outline dark-toggle';
-        btn.setAttribute('aria-label', 'Toggle dark mode');
-        btn.title = 'Toggle dark mode';
-        btn.addEventListener('click', toggleDarkMode);
-        const navButtons = document.querySelector('.nav-buttons');
-        if (navButtons) {
-            navButtons.insertBefore(btn, navButtons.firstChild);
-        }
-        updateDarkIcon();
-    }
-
-    function updateDarkIcon() {
-        const btn = document.querySelector('.dark-toggle');
-        if (!btn) return;
-        btn.textContent = html.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
-    }
-
-    /* =========================
        FORM VALIDATION
     ========================== */
     function initFormValidation() {
@@ -237,7 +202,6 @@
        INIT
     ========================== */
     function init() {
-        initDarkMode();
         initFormValidation();
         initScrollReveal();
         initActiveNav();
