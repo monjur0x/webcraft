@@ -281,7 +281,7 @@ pre .n{ color:#fbbf24; }
 
 .video-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:30px;
     padding:60px 0 100px;
 }
@@ -407,7 +407,7 @@ pre .n{ color:#fbbf24; }
         grid-template-columns:repeat(2,1fr);
     }
     .video-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
     }
     .course-hero h1{
         font-size:2.2rem;
@@ -416,6 +416,9 @@ pre .n{ color:#fbbf24; }
 
 @media(max-width:640px){
     .catalog-grid{
+        grid-template-columns:1fr;
+    }
+    .video-grid{
         grid-template-columns:1fr;
     }
     .lesson-nav{
