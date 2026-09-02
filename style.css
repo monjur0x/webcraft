@@ -12,12 +12,67 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --bg: #F8FAFC;
+    --bg-alt: #f1f5f9;
+    --text: #0F172A;
+    --text-muted: #64748B;
+    --text-light: #94a3b8;
+    --border: #eef2f7;
+    --border-light: #dbeafe;
+    --card-bg: #ffffff;
+    --footer-bg: #0F172A;
+    --footer-text: #cbd5e1;
+    --footer-bottom: #94a3b8;
+    --accent: #2563EB;
+    --accent-light: #38BDF8;
+    --accent-glow: rgba(37, 99, 235, .3);
+    --badge-bg: #DBEAFE;
+    --badge-text: #2563EB;
+    --code-bg: #0F172A;
+    --code-text: #e2e8f0;
+    --tip-bg: #FFFBEB;
+    --tip-border: #F59E0B;
+    --tip-text: #92400E;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, .05);
+    --shadow-hover: rgba(0, 0, 0, .1);
+}
+
+[data-theme="dark"] {
+    --bg: #0F172A;
+    --bg-alt: #1e293b;
+    --text: #E2E8F0;
+    --text-muted: #94a3b8;
+    --text-light: #64748B;
+    --border: #334155;
+    --border-light: #1e3a5f;
+    --card-bg: #1e293b;
+    --footer-bg: #020617;
+    --footer-text: #94a3b8;
+    --footer-bottom: #475569;
+    --accent: #60a5fa;
+    --accent-light: #38bdf8;
+    --accent-glow: rgba(96, 165, 250, .3);
+    --badge-bg: #1e3a5f;
+    --badge-text: #60a5fa;
+    --code-bg: #0F172A;
+    --code-text: #e2e8f0;
+    --tip-bg: #292524;
+    --tip-border: #D97706;
+    --tip-text: #FDE68A;
+    --white: #1e293b;
+    --shadow: rgba(0, 0, 0, .3);
+    --shadow-hover: rgba(0, 0, 0, .5);
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background: #F8FAFC;
-    color: #0F172A;
+    background: var(--bg);
+    color: var(--text);
     overflow-x: hidden;
     line-height: 1.6;
+    transition: background .3s, color .3s;
 }
 
 a {
@@ -303,7 +358,51 @@ img {
 }
 
 /* =========================
-   GLASS CARDS
+    ANIMATIONS
+========================= */
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* =========================
+    SCROLL REVEAL
+========================= */
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+    DARK TOGGLE
+========================= */
+
+.dark-toggle {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    border-radius: 50px;
+    line-height: 1;
+}
+
+/* =========================
+    GLASS CARDS
 ========================= */
 
 .glass-card {
@@ -841,5 +940,104 @@ img {
     .contact-container {
         grid-template-columns: 1fr;
     }
+}
+
+/* =========================
+    DARK THEME OVERRIDES
+========================= */
+
+[data-theme="dark"] .navbar {
+    background: rgba(15, 23, 42, .95);
+    border-bottom-color: rgba(255, 255, 255, .1);
+}
+
+[data-theme="dark"] .logo {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .nav-links a {
+    color: #E2E8F0;
+}
+
+[data-theme="dark"] .glass-card {
+    background: rgba(30, 41, 59, .7);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+[data-theme="dark"] .glass-card .card-tag {
+    background: #1e3a5f;
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .line {
+    background: #334155;
+}
+
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .why-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .contact-info,
+[data-theme="dark"] .contact-form,
+[data-theme="dark"] .course-cover,
+[data-theme="dark"] .video-card {
+    background: var(--card-bg);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .course-sidebar {
+    background: var(--card-bg);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .course-sidebar a {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .course-sidebar a:hover {
+    background: #1e3a5f;
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .code-lines .line {
+    background: #334155;
+}
+
+[data-theme="dark"] .info-box {
+    background: #1e293b;
+}
+
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea {
+    background: #1e293b;
+    border-color: #334155;
+    color: #E2E8F0;
+}
+
+[data-theme="dark"] .contact-form input:focus,
+[data-theme="dark"] .contact-form textarea:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, .1);
+}
+
+[data-theme="dark"] .tip {
+    background: var(--tip-bg);
+    border-left-color: var(--tip-border);
+    color: var(--tip-text);
+}
+
+[data-theme="dark"] pre {
+    background: #0F172A;
+}
+
+/* =========================
+    ERROR MESSAGE
+========================= */
+
+.error-msg {
+    color: #ef4444;
+    font-size: .8rem;
+    margin-top: 4px;
+    display: block;
+}
 
 }
